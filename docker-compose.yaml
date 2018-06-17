@@ -1,0 +1,59 @@
+flask_app:
+  image: flask_app:latest
+  container_name: flask_app
+  restart: always
+  links:
+    - flask_app_db
+    - flask_app_redis
+  ports:
+    - "5001:5000"
+  volumes:
+     # 挂载代码进容器
+    - ./flask_app_code/:/opt/project/app_code
+    # docker-compose 启动时控制应用服务等待db就绪再启动flask_app
+    - ./flask_app/wait_for_db_complete.sh:/etc/wait_for_db_complete.sh
+    # 利用Supervisord控制uWSGI
+    - ./supervisor/supervisord.conf:/etc/supervisord.conf
+    # flask 应用程序结合uwsgi运行
+    - ./uwsgi/flask_uwsgi.ini:/etc/flask_uwsgi.ini
+  environment:
+    # Flask应用使用到了邮箱功能，用于注册、修改密码、修改邮箱的功能；
+    - MAIL_PASSWORD=xxxxxxx
+    - MAIL_USERNAME=2399447849@qq.com #os.environ.get('MAIL_USERNAME')
+ 
+
+  command: ["/etc/wait_for_db_complete.sh", "flask_app_db", "/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
+
+flask_app_db:
+  image: mysql:5.6
+  restart: always
+  container_name: flask_app_db
+  ports:
+    - "3306"
+  # 将容器的数据 目录挂出来
+  volumes:
+    - /data/flask_app_mysql_data:/var/lib/mysql
+
+    #- /tmp/flask_app_mysql_data:/var/lib/mysql
+  # 环境变量
+  environment:
+    - MYSQL_ROOT_PASSWORD=devopsdemo
+    - MYSQL_DATABASE=devopsdemo
+
+
+flask_app_nginx:
+  image: nginx:latest
+  restart: always
+  container_name: flask_app_nginx
+  links:
+    - flask_app:uwsgi
+  ports:
+    - "8080:80"
+  volumes:
+    - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+
+flask_app_redis:
+  image: redis:latest
+  container_name: flask_app_redis
+  ports:
+    - "6379"
