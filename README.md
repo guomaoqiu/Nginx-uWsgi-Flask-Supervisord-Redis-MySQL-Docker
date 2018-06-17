@@ -1,3 +1,5 @@
+# Nginx-uWsgi-Flask-Supervisord-Redis-MySQL-Docker
+
 ##### 0.安装docker环境
 ```
 cd /etc/yum.repos.d/
@@ -24,5 +26,4 @@ cd Nginx-uWsgi-Flask-Supervisord-MySQL-Docker-K8S
 docker-compose up
 ```
 
-
-flask_app_code 是应用的服务器代码一般单独管理，这里通过数据卷挂载到了容器
+flask_app_code 是Flask框架应用代码,单独管理，这里通过数据卷挂载到了容器
