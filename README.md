@@ -1,4 +1,32 @@
 # Nginx-uWsgi-Flask-Supervisord-Redis-MySQL-Docker
+## 部署架构:
+```
+.
+├── README.md
+├── docker-compose.yaml              # 使用docker-compose来编排部署
+├── flask_app                        # 用于跑Flask应用的容器
+│   ├── Dockerfile
+│   └── wait_for_db_complete.sh
+├── flask_app_code                   # 后端项目应用代码目
+│   ├── LICENSE
+│   ├── README.md
+│   ├── app
+│   ├── config.py
+│   ├── manage.py
+│   ├── requirements.txt
+│   ├── screenshots
+│   └── tests
+├── nginx                            # Nginx用于前端接收用户请求的容器
+│   └── nginx.conf
+├── python27_baseenv                 # 基础Python环境镜像
+│   ├── Dockerfile
+│   └── README.md
+├── supervisor                       # 用于管理uwsgi服务进程
+│   └── supervisord.conf
+└── uwsgi                            # 通过uWsgi来为Nginx-Flask牵线搭桥
+    └── flask_uwsgi.ini
+```
+## 部署步骤：
 
 ##### 0.安装docker环境
 ```
@@ -27,3 +55,5 @@ docker-compose up
 ```
 
 flask_app_code 是Flask框架应用代码,单独管理，这里通过数据卷挂载到了容器
+
+
