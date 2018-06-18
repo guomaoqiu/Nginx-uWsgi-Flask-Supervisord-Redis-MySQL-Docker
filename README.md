@@ -26,6 +26,10 @@
 └── uwsgi                            # 通过uWsgi来为Nginx-Flask牵线搭桥
     └── flask_uwsgi.ini
 ```
+
+## 访问流程:
+![](https://github.com/guomaoqiu/flask_bootstrap/raw/master/screenshots/261529307197_.pic_hd.jpg)
+
 ## 部署步骤：
 
 ##### 0.安装docker环境
