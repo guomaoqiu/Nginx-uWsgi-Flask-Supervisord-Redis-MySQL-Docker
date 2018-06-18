@@ -1,4 +1,3 @@
-# Nginx-uWsgi-Flask-Supervisord-Redis-MySQL-Docker
 之前使用Flask开发了两三个公司或个人使用的平台；在搭建过程当中如果换了环境的话比较麻烦；这次尝试放到docker里面去跑；下面是搭建的一个过程以及对于学习的一个记录，此次web框架还是使用的之前用Flask写的一个基础后台。
 ## 部署架构:
 ```
@@ -65,19 +64,19 @@ systemctl start docker
 
 ##### 1.构建python 基础运行环境，基于alpine镜像
 ```
-cd Nginx-uWsgi-Flask-Supervisord-MySQL-Docker-K8S
+cd Nginx-uWsgi-Flask-Supervisord-Redis-MySQL-Docker
 docker build -f python27_baseenv/Dockerfile . -t python27_baseenv
 ```
 
 ##### 2.构建安装应用依赖包
 ```
-cd Nginx-uWsgi-Flask-Supervisord-MySQL-Docker-K8S
+cd Nginx-uWsgi-Flask-Supervisord-Redis-MySQL-Docker
 docker build -f flask_app/Dockerfile . -t flask_app
 ```
 
 ##### 3.执行docker-compose
 ```
-cd Nginx-uWsgi-Flask-Supervisord-MySQL-Docker-K8S
+cd Nginx-uWsgi-Flask-Supervisord-Redis-MySQL-Docker
 docker-compose up
 ```
 ##### 运行状态
