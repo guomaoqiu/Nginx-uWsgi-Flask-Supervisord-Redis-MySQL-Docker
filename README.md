@@ -28,7 +28,7 @@
 ```
 
 ## 访问流程:
-![](https://github.com/guomaoqiu/flask_bootstrap/raw/master/screenshots/261529307197_.pic_hd.jpg)
+![](https://raw.githubusercontent.com/guomaoqiu/Nginx-uWsgi-Flask-Supervisord-Redis-MySQL-Docker/master/flask_app_code/screenshots/261529307197_.pic_hd.jpg)
 
 ## 部署步骤：
 
