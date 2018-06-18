@@ -84,7 +84,7 @@ docker-compose up
 ![](https://raw.githubusercontent.com/guomaoqiu/Nginx-uWsgi-Flask-Supervisord-Redis-MySQL-Docker/master/flask_app_code/screenshots/status.jpeg)
 ##### 登录
 ![](https://raw.githubusercontent.com/guomaoqiu/Nginx-uWsgi-Flask-Supervisord-Redis-MySQL-Docker/master/flask_app_code/screenshots/login.jpeg)
-
+![](https://raw.githubusercontent.com/guomaoqiu/Nginx-uWsgi-Flask-Supervisord-Redis-MySQL-Docker/master/flask_app_code/screenshots/login_ok.jpeg)
 ![](https://raw.githubusercontent.com/guomaoqiu/Nginx-uWsgi-Flask-Supervisord-Redis-MySQL-Docker/master/flask_app_code/screenshots/status.jpeg)
 ![](https://raw.githubusercontent.com/guomaoqiu/Nginx-uWsgi-Flask-Supervisord-Redis-MySQL-Docker/master/flask_app_code/screenshots/status.jpeg)
 ![](https://raw.githubusercontent.com/guomaoqiu/Nginx-uWsgi-Flask-Supervisord-Redis-MySQL-Docker/master/flask_app_code/screenshots/status.jpeg)
