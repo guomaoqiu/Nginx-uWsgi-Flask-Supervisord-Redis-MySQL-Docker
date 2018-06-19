@@ -78,24 +78,24 @@ docker build -f flask_app/Dockerfile . -t flask_app
 
 ##### 5.Redis镜像使用默认的
 
-##### 3.执行docker-compose
+##### 6.执行docker-compose
 ```
 cd Nginx-uWsgi-Flask-Supervisord-Redis-MySQL-Docker
 docker-compose up
 ```
-##### 运行状态
+#### 运行状态
 ![](https://raw.githubusercontent.com/guomaoqiu/Nginx-uWsgi-Flask-Supervisord-Redis-MySQL-Docker/master/flask_app_code/screenshots/status.jpeg)
-##### 登录
+#### 登录
 ![](https://raw.githubusercontent.com/guomaoqiu/Nginx-uWsgi-Flask-Supervisord-Redis-MySQL-Docker/master/flask_app_code/screenshots/login.jpeg)
-##### 用户注册
+#### 用户注册
 ![](https://raw.githubusercontent.com/guomaoqiu/Nginx-uWsgi-Flask-Supervisord-Redis-MySQL-Docker/master/flask_app_code/screenshots/login_unconfiremd.jpeg)
 ![](https://raw.githubusercontent.com/guomaoqiu/Nginx-uWsgi-Flask-Supervisord-Redis-MySQL-Docker/master/flask_app_code/screenshots/email.jpeg)
 ![](https://raw.githubusercontent.com/guomaoqiu/Nginx-uWsgi-Flask-Supervisord-Redis-MySQL-Docker/master/flask_app_code/screenshots/login_ok.jpeg)
 ![](https://raw.githubusercontent.com/guomaoqiu/Nginx-uWsgi-Flask-Supervisord-Redis-MySQL-Docker/master/flask_app_code/screenshots/db.jpeg)
-##### Flask应用的访问、登录、注册过程日志
-###### Nginx
+#### Flask应用的访问、登录、注册过程日志
+##### Nginx
 ![](https://raw.githubusercontent.com/guomaoqiu/Nginx-uWsgi-Flask-Supervisord-Redis-MySQL-Docker/master/flask_app_code/screenshots/nginxlog.jpeg)
-###### uWSGI
+##### uWSGI
 ![](https://raw.githubusercontent.com/guomaoqiu/Nginx-uWsgi-Flask-Supervisord-Redis-MySQL-Docker/master/flask_app_code/screenshots/uwsgilog.jpeg)
 
 
