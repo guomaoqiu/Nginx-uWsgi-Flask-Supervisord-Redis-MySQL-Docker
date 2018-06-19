@@ -35,13 +35,13 @@
 * 后端Web框架与数据层MySQL或Redis交互
 
 ### 简单理解起来就是酱紫的:
-1. Nginx：Hey，WSGI，我刚收到了一个请求，我需要你作些准备，然后由Flask来处理这个请求。
-2. WSGI：OK，Nginx。我会设置好环境变量，然后将这个请求传递给Flask处理。
-3. Flask：Thanks WSGI！给我一些时间，我将会把请求的响应返回给你。
-4. WSGI：Alright，那我等你。
-5. Flask：Okay，我完成了，这里是请求的响应结果，请求把结果传递给Nginx。 WSGI：Good job！
-6. Nginx，这里是响应结果，已经按照要求给你传递回来了。
-7. Nginx：Cool，我收到了，我把响应结果返回给客户端。大家合作愉快~
+1. `Nginx`：Hey，WSGI，我刚收到了一个请求，我需要你作些准备，然后由Flask来处理这个请求。
+2. `WSGI`：OK，Nginx。我会设置好环境变量，然后将这个请求传递给Flask处理。
+3. `Flask`：Thanks WSGI！给我一些时间，我将会把请求的响应返回给你。
+4. `WSGI`：Alright，那我等你。
+5. `Flask`：Okay，我完成了，这里是请求的响应结果，请求把结果传递给Nginx。 
+6. `WSGI`：Good job！ Nginx，这里是响应结果，已经按照要求给你传递回来了。
+7. `Nginx`：Cool，我收到了，我把响应结果返回给客户端。大家合作愉快~
 
 ## 搭建思路:
 * Nginx 单独一个容器

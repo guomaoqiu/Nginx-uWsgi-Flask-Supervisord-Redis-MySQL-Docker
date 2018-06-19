@@ -10,16 +10,16 @@ flask_app:
   volumes:
      # 挂载代码进容器
     - ./flask_app_code/:/opt/project/app_code
-    # docker-compose 启动时控制应用服务等待db就绪再启动flask_app
+    # docker-compose 启动时控制应用服务等待db就绪再启动
     - ./flask_app/wait_for_db_complete.sh:/etc/wait_for_db_complete.sh
-    # 利用Supervisord控制uWSGI
+    # 利用Supervisord管理uWSGI进程
     - ./supervisor/supervisord.conf:/etc/supervisord.conf
     # flask 应用程序结合uwsgi运行
     - ./uwsgi/flask_uwsgi.ini:/etc/flask_uwsgi.ini
   environment:
     # Flask应用使用到了邮箱功能，用于注册、修改密码、修改邮箱的功能；
-    - MAIL_PASSWORD=xxxxxxx
-    - MAIL_USERNAME=2399447849@qq.com #os.environ.get('MAIL_USERNAME')
+    - MAIL_PASSWORD=YOUR_EMAIL_PASSWORD
+    - MAIL_USERNAME=2399447849@qq.com
  
 
   command: ["/etc/wait_for_db_complete.sh", "flask_app_db", "/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]

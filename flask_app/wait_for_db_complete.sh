@@ -1,6 +1,5 @@
 #!/bin/bash
-# wait-for-postgres.sh
-
+# wait_for_db_complete.sh
 set -e
 
 host=${1}
