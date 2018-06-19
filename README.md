@@ -53,6 +53,7 @@
 
 
 ## 部署步骤：
+主要还是通过编写Dockerfile来定制特定的运行环境镜像
 
 ##### 0.安装docker环境
 ```
@@ -62,17 +63,20 @@ yum install -y docker-ce docker-compose
 systemctl start docker
 ```
 
-##### 1.构建python 基础运行环境，基于alpine镜像
+##### 1.构建python基础运行环境镜像，基于alpine镜像
 ```
 cd Nginx-uWsgi-Flask-Supervisord-Redis-MySQL-Docker
 docker build -f python27_baseenv/Dockerfile . -t python27_baseenv
 ```
 
-##### 2.构建安装应用依赖包
+##### 2.构建Flask应用框架运行所需依赖包镜像
 ```
 cd Nginx-uWsgi-Flask-Supervisord-Redis-MySQL-Docker
 docker build -f flask_app/Dockerfile . -t flask_app
 ```
+##### 4.Nginx镜像使用默认，配置文件需要修改，这里通过挂载方式
+
+##### 5.Redis镜像使用默认的
 
 ##### 3.执行docker-compose
 ```
