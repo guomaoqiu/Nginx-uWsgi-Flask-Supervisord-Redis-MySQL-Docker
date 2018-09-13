@@ -1,7 +1,7 @@
-#镜像定义
+# 镜像定义
 FROM alpine
 
-#作者声明
+# 作者声明
 MAINTAINER guomaoqiu<guomaoqiu@sina.com>
 
 # 按需安装
