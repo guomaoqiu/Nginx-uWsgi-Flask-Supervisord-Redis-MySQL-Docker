@@ -12,4 +12,3 @@ COPY ./flask_app_code/requirements.txt $WORKDIR
  
 # 安装应用第三方依赖软件
 RUN pip install --no-cache-dir -i https://pypi.douban.com/simple -r requirements.txt
-

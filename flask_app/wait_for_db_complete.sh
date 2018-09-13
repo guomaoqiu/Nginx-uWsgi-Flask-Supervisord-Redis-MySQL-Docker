@@ -13,5 +13,3 @@ done
 
 >&2 echo "[ *** Notice *** ]: ${host} is up - executing command"
 exec ${cmd}
-
-
