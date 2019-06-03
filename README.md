@@ -106,6 +106,6 @@ docker-compose up
 
 在我的VPS上面跑起来了... 	
 
-<a href="http://66.112.211.12:8090" target="_blank">
+<a href="http://66.112.211.181:8090" target="_blank">
   <img src="https://img.alicdn.com/tfs/TB12GX6zW6qK1RjSZFmXXX0PFXa-744-122.png" width="180" />
 </a>
